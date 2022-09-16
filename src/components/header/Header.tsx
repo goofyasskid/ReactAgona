@@ -5,7 +5,9 @@ type Props = {}
 const Header = (props: Props) => {
   return (
     <header className={style.header}>
-        ;spsps
+        <div className={style.header__wrapper}>
+            {/* < */}
+        </div>
     </header>
   )
 }

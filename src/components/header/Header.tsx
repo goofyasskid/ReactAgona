@@ -1,12 +1,13 @@
 import style from './Header.module.sass';
+import Navbar from './navbar/Navbar';
+import UserPanel from './userPanel/UserPanel';
 
-type Props = {}
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <header className={style.header}>
         <div className={style.header__wrapper}>
-            {/* < */}
+            <Navbar/>
+            <UserPanel/>
         </div>
     </header>
   )

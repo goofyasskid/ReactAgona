@@ -1,14 +1,13 @@
-import logo from './logo.svg';
-import './App.sass';
+import "./App.sass";
+import Header from "./components/header/Header";
+import logo from "./logo.svg";
 
-const App = () =>{
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        lslsl
-      </header>
+      <Header />
     </div>
   );
-}
+};
 
 export default App;

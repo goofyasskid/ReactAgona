@@ -5,3 +5,9 @@ export interface ICard {
     image: string,
     buttonText: string,
   }
+
+  export interface IMainCard {
+    title: string,
+    text: string,
+    image: string,
+  }

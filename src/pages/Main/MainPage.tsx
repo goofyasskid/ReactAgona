@@ -1,19 +1,14 @@
-import style from './MainPage.module.sass'
+import Slider from "../../components/ui/slider/Slider";
+import style from "./MainPage.module.sass";
 
 const MainPage = () => {
   return (
-    <div>
-      <ul>
-        <li>dkjfhwrhf</li>
-        <li>dkjfhwrhf</li>
-        <li>dkjfhwrhf</li>
-        <li>dkjfhwrhf</li>
-        <li>dkjfhwrhf</li>
-        <li>dkjfhwrhf</li>
-        <li>dkjfhwrhf</li>
-      </ul>
+    <div className={style.main}>
+      <div className={style.main__wrapper}>
+        <Slider/>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;

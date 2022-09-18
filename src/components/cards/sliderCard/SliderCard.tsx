@@ -8,7 +8,27 @@ const SliderCard = () => {
     image: "/slider/first.png",
     buttonText: "Условия сервиса",
   };
-  return <div>SliderCard</div>;
+  return (
+    <div
+      className={style.slider_card}
+      style={{
+        background: `${mock.background}`,
+      }}
+    >
+      <div className={style.text}>
+        <div className={style.wrapper}>
+          <h1>{mock.title}</h1>
+          <p>{mock.text}</p>
+          <div className={style.button_wrapper}>
+            <button>{mock.buttonText}</button>
+          </div>
+        </div>
+      </div>
+      <div className={style.image}>
+        <img src={mock.image} alt={mock.title} />
+      </div>
+    </div>
+  );
 };
 
 export default SliderCard;

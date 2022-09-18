@@ -1,6 +1,6 @@
+import Navbar from '../ui/navbar/Navbar';
+import UserPanel from '../ui/userPanel/UserPanel';
 import style from './Header.module.sass';
-import Navbar from './navbar/Navbar';
-import UserPanel from './userPanel/UserPanel';
 
 const Header = () => {
   return (

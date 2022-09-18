@@ -1,5 +1,6 @@
 import style from "./Navbar.module.sass";
 import logo from '../../../assets/logo.svg'
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -7,10 +8,10 @@ const Navbar = () => {
       <div className={style.navbar__wrapper}>
         <img src={logo} alt="logo"/>
         <ul>
-          <li>Главная</li>
-          <li>Пункты сбора</li>
-          <li>ЭкоМаркет</li>
-          <li>О сервисе</li>
+          <li><NavLink to='/'>Главная</NavLink></li>
+          <li><NavLink to='/points'>Пункты сбора</NavLink></li>
+          <li><NavLink to='/market'>ЭкоМаркет</NavLink></li>
+          <li><NavLink to='/about'>О сервисе</NavLink></li>
         </ul>
       </div>
     </nav>

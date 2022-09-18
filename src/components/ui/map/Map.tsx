@@ -15,7 +15,7 @@ const Map: FC<PropsWithChildren<any>> = ({ children }) => {
         zoom={15}
         zoomControl={false}
         style={{
-          height: "calc(100vh - 135px)",
+          height: "100vh",
           width: "100%",
           display: "flex",
         }}

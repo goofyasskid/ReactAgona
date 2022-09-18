@@ -1,31 +1,30 @@
+import { ICard } from "../../../interface/ICard.interface";
 import style from "./SliderCard.module.sass";
+import { FC } from "react";
 
-const SliderCard = () => {
-  const mock = {
-    title: "Сделаем мир чище",
-    background: "#B3EDC8",
-    text: "Сдай макулатуру или старую одежду и получи скидку на покупку товаров из переработанных материалов",
-    image: "/slider/first.png",
-    buttonText: "Условия сервиса",
-  };
+const SliderCard: FC<ICard> = ({
+  title,
+  background,
+  text,
+  image,
+  buttonText,
+}) => {
   return (
     <div
       className={style.slider_card}
       style={{
-        background: `${mock.background}`,
+        background: `${background}`,
       }}
     >
-      <div className={style.text}>
-        <div className={style.wrapper}>
-          <h1>{mock.title}</h1>
-          <p>{mock.text}</p>
-          <div className={style.button_wrapper}>
-            <button>{mock.buttonText}</button>
-          </div>
+      <div className={style.slider_card__text}>
+        <div className={style.slider_card__info}>
+          <h1>{title}</h1>
+          <p>{text}</p>
+          <button>{buttonText}</button>
         </div>
       </div>
-      <div className={style.image}>
-        <img src={mock.image} alt={mock.title} />
+      <div className={style.slider_card__image}>
+        <img src={image} alt={title} />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import next from "../../../assets/next.svg";
 import prev from "../../../assets/prev.svg";
+import { cardInfo } from "../../../mocks/sliderCard.mock";
 import SliderCard from "../../cards/sliderCard/SliderCard";
 import "./Slider.sass";
 import { Navigation } from "swiper";
@@ -27,12 +28,19 @@ const Slider = () => {
           prevEl: ".prev",
         }}
       >
-        <SwiperSlide>
-          <SliderCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SliderCard />
-        </SwiperSlide>
+        {" "}
+        {cardInfo.map((item, idx) => (
+          <SwiperSlide>
+            <SliderCard
+              key={idx}
+              title={item.title}
+              background={item.background}
+              text={item.text}
+              image={item.image}
+              buttonText={item.buttonText}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

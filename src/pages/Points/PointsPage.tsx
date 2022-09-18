@@ -1,9 +1,12 @@
-import style from './PointPage.module.sass'
+import Map from "../../components/ui/map/Map";
+import style from "./PointPage.module.sass";
 
 const PointsPage = () => {
   return (
-    <div>PointsPage</div>
-  )
-}
+    <div>
+      <Map></Map>
+    </div>
+  );
+};
 
-export default PointsPage
+export default PointsPage;

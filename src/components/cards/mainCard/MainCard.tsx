@@ -1,6 +1,7 @@
 import { IMainCard } from "../../../interface/ICard.interface";
 import style from "./MainCard.module.sass";
 import { FC } from "react";
+import arr from '../../../assets/arr.svg'
 
 const MainCard: FC<IMainCard> = ({ title, text, image }) => {
   return (
@@ -8,7 +9,9 @@ const MainCard: FC<IMainCard> = ({ title, text, image }) => {
       <div className={style.main_card__info}>
         <h2>{title}</h2>
         <p>{text}</p>
-        <button />
+        <button>
+          <img src={arr} alt="arr"/>
+        </button>
       </div>
       <div className={style.main_card__image}>
         <img src={image} alt="img" />

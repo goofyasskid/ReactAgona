@@ -1,5 +1,7 @@
 import FiltersCard from "../../components/cards/filtersCard/FiltersCard";
+import ProductCard from "../../components/cards/productCard/ProductCard";
 import MarketPanel from "../../components/ui/marketPanel/MarketPanel";
+import { productsInfo } from "../../mocks/products.mock";
 import style from "./MarketPage.module.sass";
 
 const MarketPage = () => {
@@ -12,7 +14,18 @@ const MarketPage = () => {
             <div className={style.market__blocks__filters}>
               <FiltersCard />
             </div>
-            <div className={style.market__blocks__products}>;lkjghf</div>
+            <div className={style.market__blocks__products}>
+              {productsInfo.map((item, idx) => (
+                <ProductCard
+                  key={idx}
+                  title={item.title}
+                  category={item.category}
+                  image={item.image}
+                  price={item.price}
+                  brand={item.brand}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

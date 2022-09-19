@@ -5,7 +5,7 @@ import style from "./MainPage.module.sass";
 
 const MainPage = () => {
   return (
-    <main className={style.main}>
+    <div className={style.main}>
       <div className={style.main__wrapper}>
         <div className={style.main__content}>
           <Slider />
@@ -21,7 +21,7 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

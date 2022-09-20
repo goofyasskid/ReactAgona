@@ -12,7 +12,7 @@ const UserCard = () => {
         <p>+7 (917) 888 88 88</p>
         <span>ivanov@gmail.com</span>
         <div className={style.user_card__button}>
-            <button>Редактировать</button>
+          <button>Редактировать</button>
         </div>
       </div>
     </div>

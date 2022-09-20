@@ -4,16 +4,15 @@ import Header from "./components/header/Header";
 import MainPage from "./pages/Main/MainPage";
 import MarketPage from "./pages/Market/MarketPage";
 import PointsPage from "./pages/Points/PointsPage";
-import { Routes, BrowserRouter, Route } from "react-router-dom";
 import UserPage from "./pages/User/UserPage";
+import { Routes, BrowserRouter, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-
-        <main className="App__pages">
+        <main>
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/points" element={<PointsPage />} />

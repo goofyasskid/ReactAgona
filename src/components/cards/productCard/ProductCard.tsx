@@ -1,6 +1,7 @@
 import { IProduct } from "../../../interface/IProduct.interface";
 import style from "./ProductCard.module.sass";
 import { FC } from "react";
+import money from '../../../assets/money.svg';
 
 const ProductCard: FC<IProduct> = ({
   title,
@@ -18,7 +19,10 @@ const ProductCard: FC<IProduct> = ({
       <div className={style.product_card__info}>
         <h5>{title}</h5>
         <h5>{category}</h5>
-        <span>{price}</span>
+        <div className={style.product_card__price}>
+          <img src={money} alt="money"/>
+          <span>{price}</span>
+        </div>
       </div>
     </div>
   );

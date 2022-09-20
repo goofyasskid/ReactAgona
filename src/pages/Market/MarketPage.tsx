@@ -1,3 +1,4 @@
+import BalanceCard from "../../components/cards/balanceCard/BalanceCard";
 import FiltersCard from "../../components/cards/filtersCard/FiltersCard";
 import ProductCard from "../../components/cards/productCard/ProductCard";
 import MarketPanel from "../../components/ui/marketPanel/MarketPanel";
@@ -15,6 +16,7 @@ const MarketPage = () => {
               <FiltersCard />
             </div>
             <div className={style.market__blocks__products}>
+            <BalanceCard/>
               {productsInfo.map((item, idx) => (
                 <ProductCard
                   key={idx}

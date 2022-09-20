@@ -1,8 +1,10 @@
 .product_card
-    max-width: 275px
-    max-height: 370px
+    max-width: 250px
     background: white
     border-radius: 16px
+    margin-left: 2em
+    margin-bottom: 50px
+    cursor: pointer
     &__image
         position: relative
     &__brand
@@ -18,11 +20,19 @@
     &__info
         margin-top: 16px
         > h5
+            font-family: 'Inter'
+            font-weight: 500
             font-size: 16px
             padding-bottom: 5px
             color: rgb(104, 104, 104)
             &:first-child
                 color: black
+    &__price
+        height: 100%
+        position: relative
         > span
             font-size: 14px
-            font-weight: bold
+            font-weight: 600
+            position: absolute
+            top: 20%
+            padding-left: 8px

@@ -5,6 +5,7 @@ import MainPage from "./pages/Main/MainPage";
 import MarketPage from "./pages/Market/MarketPage";
 import PointsPage from "./pages/Points/PointsPage";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
+import UserPage from "./pages/User/UserPage";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/" element={<MainPage />} />
             <Route path="/points" element={<PointsPage />} />
             <Route path="/market" element={<MarketPage />} />
+            <Route path="/user" element={<UserPage />} />
           </Routes>
         </main>
         <Footer />

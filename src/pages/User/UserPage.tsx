@@ -1,4 +1,5 @@
 import HistoryCard from "../../components/cards/historyCard/HistoryCard";
+import PromoCard from "../../components/cards/promoCard/PromoCard";
 import UserCard from "../../components/cards/userCard/UserCard";
 import style from "./UserPage.module.sass";
 
@@ -13,7 +14,7 @@ const UserPage = () => {
               <UserCard />
             </div>
             <div className={style.user__blocks__cards}>
-              <HistoryCard />
+              <PromoCard />
             </div>
           </div>
         </div>

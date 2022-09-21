@@ -15,10 +15,10 @@ const UserPanel = () => {
         </li>
         <li>
           <img src={money} alt="money" />
-          <p>1000</p>
+          <span>1000</span>
         </li>
         <li>
-          <NavLink to="/user" className={style.user_panel__link}>
+          <NavLink to="/user/promo" className={style.user_panel__link}>
             <img src={avatar} alt="avatar" />
             <p>Алексей</p>
           </NavLink>

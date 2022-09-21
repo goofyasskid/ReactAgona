@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import {MainStore} from "./mainStore";
+import { MainStore } from "./mainStore";
 
 export class AuthenticationStore {
     authentication = false;
@@ -11,4 +11,8 @@ export class AuthenticationStore {
     setAuthentication = (value: boolean) => {
         this.authentication = value;
     };
+    get auth(){
+        return this.authentication;
+    }
+
 }

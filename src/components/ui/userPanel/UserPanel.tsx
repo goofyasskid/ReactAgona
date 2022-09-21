@@ -3,24 +3,27 @@ import money from "../../../assets/money.svg";
 import point from "../../../assets/point.svg";
 import mainStore from "../../../stores/mainStore";
 import { useStore } from "../../../utils/use-stores-hook";
-import style from "./UserPanel.module.sass";
-import { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
 import Modal from "../../modals/Modal";
-import ModalLogin from "../../modals/modalContent/modalLogin/ModalLogin";
+import ModalAuth from "../../modals/modalContent/ModalAuth";
+import style from "./UserPanel.module.sass";
+import { NavLink } from "react-router-dom";
+import { LoginModal } from "../../../mocks/modalMock";
 
 const UserPanel = () => {
-  const [menuActive, setMenuActive] = useState(false);
   const {
     modalStore: { setCurrentModal },
-    authenticationStore: { authentication, setAuthentication },
   } = useStore();
-  const navigate = useNavigate();
-  
+
   const handleClick = () => {
-    if (mainStore.authenticationStore.auth) {
-      navigate("/user/promo");
-    } else setCurrentModal(<Modal children={<ModalLogin />} />);
+    if (!mainStore.authenticationStore.auth)
+      setCurrentModal(
+        <Modal
+          children={
+            <ModalAuth modal={LoginModal}
+            />
+          }
+        />
+      );
   };
   return (
     <div className={style.user_panel}>
@@ -37,7 +40,7 @@ const UserPanel = () => {
           <li>
             <NavLink to="/user/promo" className={style.user_panel__link}>
               <img src={avatar} alt="avatar" />
-              <p>Алексей</p>{" "}
+              <p>Алексей</p>
             </NavLink>
           </li>
         </ul>

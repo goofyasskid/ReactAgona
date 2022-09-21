@@ -10,7 +10,9 @@ const PointsPage = () => {
       <div className={style.points_page__search}>
         <div className={style.points_page__search__content}>
           <SearchPanel />
-          <div className={style.points_page__cards}>
+        </div>
+        <div className={style.points_page__cards}>
+          <div className={style.points_page__cards__block}>
             {arr.map((item) => (
               <MaterialCard key={item} />
             ))}

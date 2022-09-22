@@ -2,9 +2,9 @@ import MaterialCard from "../../components/cards/materialCard/MaterialCard";
 import Map from "../../components/ui/map/Map";
 import SearchPanel from "../../components/ui/searchPanel/SearchPanel";
 import style from "./PointPage.module.sass";
+import { Outlet } from "react-router-dom";
 
 const PointsPage = () => {
-  const arr = [1, 2, 3, 4, 5];
   return (
     <div className={style.points_page}>
       <div className={style.points_page__search}>
@@ -13,9 +13,7 @@ const PointsPage = () => {
         </div>
         <div className={style.points_page__cards}>
           <div className={style.points_page__cards__block}>
-            {arr.map((item) => (
-              <MaterialCard key={item} />
-            ))}
+            <Outlet />
           </div>
         </div>
       </div>

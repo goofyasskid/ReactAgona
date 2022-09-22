@@ -3,7 +3,7 @@ export interface IModalContent {
     text?: string[],
     inputForms: string[],
     mainButton: string,
-    links: string[],
+    links: any,
     extrButton: string
 }
 

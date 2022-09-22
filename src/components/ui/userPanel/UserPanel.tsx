@@ -8,8 +8,9 @@ import ModalAuth from "../../modals/modalContent/ModalAuth";
 import style from "./UserPanel.module.sass";
 import { NavLink } from "react-router-dom";
 import { LoginModal } from "../../../mocks/modalMock";
+import { observer } from "mobx-react";
 
-const UserPanel = () => {
+const UserPanel = observer(() => {
   const {
     modalStore: { setCurrentModal },
   } = useStore();
@@ -53,6 +54,6 @@ const UserPanel = () => {
       )}
     </div>
   );
-};
+});
 
 export default UserPanel;

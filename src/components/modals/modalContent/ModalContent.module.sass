@@ -1,7 +1,13 @@
 .form
     box-sizing: border-box
-    > h1
-        margin-bottom: 24px
+    &__header
+        display: flex
+        justify-content: space-between
+        > h1
+            margin-bottom: 24px
+        > button
+            border: none
+            background: none
     &__message
         > p 
             font-size: 14px
@@ -35,7 +41,9 @@
     &__links
         display: flex
         justify-content: space-between
-        > a
+        > button
+            border: none
+            background: none
             font-weight: 400
             font-size: 16px
             color: #07C88E
@@ -50,4 +58,36 @@
             font-size: 16px
             text-align: center
             border-radius: 8px
+
+.qr_form
+    box-sizing: border-box
+    > h3
+        padding-bottom: 30px
+        font-weight: 600
+        color: rgba(0, 11, 38, 0.88)
+        font-size: 28px
+    > p
+        padding: 10px 0
+        font-size: 14px
+        color: rgba(0, 11, 38, 0.72)
+    &__image
+        box-sizing: border-box
+        text-align: center
+        > h3
+            font-weight: 700
+            color: rgba(0, 11, 38, 0.88)
+            font-size: 32px
+        > img
+            max-width: 350px
+    &__button
+        margin: 10px 0
+        > button
+            color: white
+            background: #07C88E
+            font-weight: 500
+            border-radius: 8px
+            border: none
+            padding: 16px 24px
+            width: 100%
+        
 

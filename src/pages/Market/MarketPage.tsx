@@ -14,9 +14,12 @@ const MarketPage = () => {
           <div className={style.market__blocks}>
             <div className={style.market__blocks__filters}>
               <FiltersCard />
+              <div className={style.market__blocks__button}>
+                <button>Сбросить фильтры</button>
+              </div>
             </div>
             <div className={style.market__blocks__products}>
-            <BalanceCard/>
+              <BalanceCard />
               {productsInfo.map((item, idx) => (
                 <ProductCard
                   key={idx}

@@ -1,3 +1,4 @@
+
 export const filtersInfo = [
     {
         title: "Пол",
@@ -12,3 +13,4 @@ export const filtersInfo = [
         variants: ["Выбрать все", "H&M", "P&B", "Adidas", "Nike", "Reebok"]
     }
 ]
+

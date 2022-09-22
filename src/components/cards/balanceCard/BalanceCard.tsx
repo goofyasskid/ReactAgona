@@ -1,6 +1,12 @@
+import mainStore from "../../../stores/mainStore";
+import Modal from "../../modals/Modal";
+import QRModal from "../../modals/modalContent/QRModal";
 import style from "./BalanceCard.module.sass";
 
 const BalanceCard = () => {
+  const handleClick = () => {
+    mainStore.modalStore.setCurrentModal(<Modal children={<QRModal />} />);
+  };
   return (
     <div className={style.balance_card}>
       <div className={style.balance_card__wrapper}>
@@ -10,7 +16,7 @@ const BalanceCard = () => {
         </div>
       </div>
       <div className={style.balance_card__button}>
-      <button>Получить промокод</button>
+        <button onClick={() => handleClick()}>Получить промокод</button>
       </div>
     </div>
   );

@@ -16,11 +16,13 @@ const MainPage = () => {
                 title={item.title}
                 text={item.text}
                 image={item.image}
+                link={item.link}
               />
             ))}
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
